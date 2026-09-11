@@ -1,0 +1,77 @@
+here<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tasbehaa | For Hand made Mirrors</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="assets/logo.jpg" alt="Tasbehaa For Hand made Mirrors" class="site-logo">
+            <div class="brand-text">
+                <span class="brand-title">Tasbehaa</span>
+                <span class="brand-subtitle">For Hand made Mirrors</span>
+            </div>
+        </div>
+
+        <div class="social-icons">
+            <a href="https://wa.me/201003089153" target="_blank" class="social-btn whatsapp"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://instagram.com" target="_blank" class="social-btn instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-btn facebook"><i class="fab fa-facebook-f"></i></a>
+        </div>
+
+        <button class="cart-btn" onclick="toggleCart()">
+            <i class="fas fa-shopping-bag"></i> السلة (<span id="cart-count">0</span>)
+        </button>
+    </header>
+
+    <section class="hero">
+        <h1>لمسات فنية فاخرة لمنزلك</h1>
+        <p>مرايا يدوية الصنع مصممة خصيصاً بأسمائكم وأشكالكم المفضلة</p>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">التشكيلة الملكية</h2>
+        <div id="product-grid" class="grid"></div>
+    </main>
+
+    <div id="cart-drawer" class="cart-drawer hidden">
+        <div class="cart-header">
+            <h3>سلة الشراء والتفصيل</h3>
+            <button class="close-btn" onclick="toggleCart()">&times;</button>
+        </div>
+        
+        <div id="cart-items" class="cart-items-list"></div>
+        
+        <div class="cart-summary">
+            <p>الإجمالي: <span id="cart-total">0</span> ج.م</p>
+        </div>
+
+        <form id="checkout-form" onsubmit="handleCheckout(event)">
+            <h4>بيانات الشحن والتخصيص</h4>
+            <input type="text" id="cust-name" placeholder="الاسم بالكامل" required>
+            <input type="tel" id="cust-phone" placeholder="رقم الهاتف (01003089153)" required>
+            <textarea id="cust-address" placeholder="عنوان الاستلام التفصيلي" required></textarea>
+            
+            <textarea id="cust-details" placeholder="اكتب هنا الاسم أو العبارة المطلوبة على المراية / مع تحديد أية تعديلات في الشكل" rows="4" required></textarea>
+            
+            <button type="submit" class="btn-checkout">تأكيد الطلب الفاخر</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>تواصل مباشر: <strong>01003089153</strong></p>
+        <div class="footer-meta">
+            <span>Managed By: <strong>Tasbehaa Mohamed</strong></span> | 
+            <span>Prepared By: <strong>ENG Ahmad Ramadan</strong></span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
