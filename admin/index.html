@@ -1,0 +1,42 @@
+here<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم | Tasbehaa Mirrors Admin</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+    <div class="admin-container">
+        <h2>لوحة إدخال الأشكال والطلبات - Tasbehaa للمرايات</h2>
+
+        <section class="admin-card">
+            <h3>تنزيل شكل وسعر جديد</h3>
+            <form id="add-product-form" onsubmit="submitProduct(event)">
+                <input type="text" id="p-name" placeholder="اسم المراية / الشكل" required>
+                <input type="number" id="p-price" placeholder="السعر (ج.م)" required>
+                <input type="text" id="p-shape" placeholder="نوع الشكل (بيضاوي، دائري، مودرن)" required>
+                <input type="text" id="p-img" placeholder="رابط صورة الشكل (URL)" required>
+                <textarea id="p-desc" placeholder="وصف التفاصيل والمقاسات"></textarea>
+                <button type="submit">نشر الشكل الجديد</button>
+            </form>
+        </section>
+
+        <section class="admin-card">
+            <h3>قائمة الطلبات الواردة بالتفاصيل والأسماء</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>رقم الطلب</th>
+                        <th>العميل</th>
+                        <th>الهاتف</th>
+                        <th>الأسماء والتفاصيل المطلوبة</th>
+                        <th>الإجمالي</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-list"></tbody>
+            </table>
+        </section>
+    </div>
+    <script src="admin.js"></script>
+</body>
+</html>
